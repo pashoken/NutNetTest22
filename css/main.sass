@@ -1,0 +1,621 @@
+// Custom.scss
+// Вариант А: Включите весь Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../bootstrap/scss/bootstrap"
+
+
+
+html
+	width: 100% !important
+	margin: 0
+	position: relative
+a
+	text-decoration: none
+	color: #ffffff
+a:hover
+	text-decoration: none
+	color: #ffffff
+.header_fixed
+  position: fixed
+  left: 0
+  top: 0
+.home
+	width: 60%
+	min-height: 670px
+	padding-bottom: 70px
+.main_icon
+	background-image: url(../img/main_icon.png)
+	width: 44px
+	height: 50px
+	margin-top: 15px
+	background-repeat: no-repeat
+	background-size: contain
+.bgphoto
+	background-image: url(../img/1.png)
+	background-repeat: no-repeat
+	background-size: cover
+.comp_name
+	width: max-content
+	font-size: 1.875rem
+	font-family: 'Roboto'
+	font-weight: 100
+	background-image: linear-gradient(0deg,#00e0d0 0%, #4aa3cc 100%)
+	text-align: center
+	-webkit-text-fill-color: transparent
+	-webkit-background-clip: text
+.nav_but
+	font-size: 1rem
+	font-family: 'Roboto'
+	font-weight: 900
+	color: white
+	display: block
+	-webkit-transition: all .3s linear
+	-moz-transition: all .3s linear
+	transition: all .3s linear
+	position: relative
+.nav_but:hover
+  color: #0bbcb8
+.nav_but:before,.nav_but:after
+  content: ''
+  background: #0bbcb8
+  position: absolute
+  width: 0
+  height: 1px
+  -webkit-transition: all .3s linear
+  -moz-transition: all .3s linear
+  transition: all .3s linear
+.nav_but:before
+  top: 100%
+  left: 0
+.nav_but:hover:before
+  width: 100%
+.label_1
+	margin-top: 163px
+	font-family: 'Playfair'
+	font-size: 2rem
+	font-weight: 900
+	color: #ffffff
+	text-align: center
+.separator_1
+  background-color: rgb(0, 224, 208)
+  margin-top: 21px
+  width: 50px
+  height: 1px
+.home_text
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	color: #ffffff
+	margin-top: 30px
+	max-width: 780px
+	text-align: center
+.home_but
+	margin-top: 50px
+	height: 38px
+	width: 118px
+	border: 1px solid #00e0d0
+	border-radius: 2px
+	background-color: transparent
+	font-family: "Hammersmith One"
+	font-size: 1rem
+	color: #00e0d0
+	text-align: center
+.nav_open
+	background-image: url(../img/open.png)
+	width: 35px
+	height: 35px
+	margin-top: 15px
+	background-repeat: no-repeat
+	background-size: contain
+	opacity: 0.8
+	transform: rotate(90deg)
+	display: none
+.story
+	width: 60%
+	min-height: 402px
+	background-color: white
+	padding-top: 70px
+	padding-bottom: 70px
+
+.story_text
+	font-size: 0.875rem
+	font-family: 'Roboto'
+	font-weight: 300
+	color: #8d8b93
+	margin-top: 15px
+.story_label
+	color: #67646f
+	font-size: 1.375rem
+	font-family: 'Playfair'
+	font-weight: bold
+.story_but
+	margin-top: 30px
+	height: 38px
+	width: 118px
+	border: 1px solid #00e0d0
+	border-radius: 2px
+	background-color: transparent
+	font-family: "Hammersmith One"
+	font-size: 1rem
+	color: #00e0d0
+	text-align: center
+.video
+	height: 550px
+	background-image: url(../img/2.png)
+	background-size: cover
+	background-repeat: no-repeat
+.play_icon
+	width: 94px
+	height: 94px
+	margin-top: 200px
+	background-image: url(../img/play.png)
+	background-repeat: no-repeat
+	background-size: contain
+.play_text
+	font-family: 'Roboto'
+	font-size: 1rem
+	font-weight: 900
+	text-align: center
+	color: white
+	letter-spacing: 1px
+	margin-top: 34px
+.expertise
+	height: max-content
+.exp_area
+	width: 60%
+.exp_card
+	min-height: 210px
+	max-width: 350px
+
+.icon_caption
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	color: #666666
+	text-align: center
+	margin-top: 35px
+.card_icon
+	height: 50px
+	user-select: none
+.card_label
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 900
+	color: #413d4b
+	text-align: center
+	margin-top: 35px
+.exp_label
+	font-family: "Playfair"
+	font-size: 1.375rem
+	font-weight: bold
+	color: #413d4b
+	margin-top: 70px
+	text-align: center
+.exp_text
+	font-family: "Playfair"
+	font-size: 0.875rem
+	font-weight: 400
+	color: #8d8c90
+	text-align: center
+	margin-top: 10px
+	letter-spacing: 1px
+.separator_2
+	width: 50px
+	height: 2px
+	background-color: rgb(65, 61, 75)
+	opacity: 0.302
+	margin-top: 10px
+.exp_cards_top
+	margin-top: 85px
+.separator_3
+  background-color: #ebebeb
+  width: 940px
+  height: 1px
+.exp_cards_bot
+	margin-top: 40px
+	margin-bottom: 60px
+.team_area
+	min-height: 700px
+	width: 60%
+	padding-bottom: 70px
+.team
+	background-image: url(../img/3.png)
+	background-size: cover
+	background-repeat: no-repeat
+.team_label
+	font-family: "Playfair"
+	font-size: 1.375rem
+	font-weight: bold
+	color: #ffffff
+	margin-top: 70px
+	text-align: center
+.team_text
+	font-family: "Playfair"
+	font-size: 0.875rem
+	font-weight: 400
+	color: #e0dee4
+	text-align: center
+	margin-top: 10px
+	letter-spacing: 1px
+.separator_4
+	width: 50px
+	height: 2px
+	background-color: rgb(255, 255, 255)
+	opacity: 0.2
+	margin-top: 10px
+	margin-bottom: 18px
+.card_name
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 900
+	color: #ffffff
+	text-align: center
+.card_photo
+	width: 100%
+	user-select: none
+	opacity: 0.9
+.card_job
+	font-family: 'Roboto'
+	font-size: 0.8125rem
+	font-weight: 300
+	color: #9b99aa
+	text-align: center
+.team_caption
+	border-width: 1px
+	border-color: rgba(225, 225, 225,0.5)
+	border-style: solid
+	min-height: 78px
+	padding: 20px
+.hire_but
+	margin-top: 20px
+	min-height: 38px
+	border: 1px solid #00e0d0
+	border-radius: 2px
+	background-color: transparent
+	font-family: "Hammersmith One"
+	font-size: 1rem
+	color: #00e0d0
+	text-align: center
+.hire_text
+	margin-top: 50px
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	color: #e5e4e7
+	text-align: center
+.works_area
+	min-height: 150px
+	width: 60%
+.works_label
+	margin-top: 70px
+	font-family: 'Playfair'
+	font-weight: bold
+	font-size: 1.375rem
+	text-align: left
+	color: #413d4b
+.works_link
+	font-family: 'Roboto'
+	font-weight: 300
+	font-size: 0.875rem
+	color: #5a5763
+	align-self: flex-end
+	width: max-content
+	display: flex
+	align-items: flex-end
+.works_link:hover
+	color: #5a5763
+.works_open
+	margin-left: 10px
+	margin-bottom: 5px
+.works_photo
+	height: 200px
+.works_more
+	margin-top: 70px
+	margin-bottom: 70px
+	height: 38px
+	width: 118px
+	border: 1px solid #00e0d0
+	border-radius: 2px
+	background-color: transparent
+	font-family: "Hammersmith One"
+	font-size: 1rem
+	color: #00e0d0
+	text-align: center
+.quotes
+	background-image: url(../img/4.png)
+	background-repeat: no-repeat
+	background-size: cover
+.quotes_area
+	width: 60%
+	min-height: 600px
+	padding-top: 70px
+	padding-bottom: 70px
+.quote_big
+	color: #ffffff
+	font-family: 'Playfair'
+	font-size: 6.25rem
+	font-weight: 400
+	text-align: center
+	max-height: 110px
+.quote_text
+	color: #fdfdfd
+	font-family: 'Playfair'
+	font-size: 1rem
+	font-weight: 400
+	text-align: center
+	opacity: 0.9
+	display: none
+.author_name
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 900
+	color: #ffffff
+	text-align: center
+	margin-top: 60px
+	display: none
+.author_job
+	font-family: 'Roboto'
+	font-size: 0.8125rem
+	font-weight: 300
+	color: #9b99aa
+	text-align: center
+	margin-top: 5px
+.humans
+	width: 50%
+	margin: auto
+	margin-top: 40px
+.humans img
+	border-radius: 50%
+	cursor: pointer
+.form_area_big
+	width: 60%
+	min-height: 650px
+	padding-top: 70px
+.form_area_small
+	width: 50%
+.form_label
+	color: #413d4b
+	font-size: 1.375rem
+	font-family: 'Playfair'
+	font-weight: bold
+	text-align: center
+	margin-bottom: 35px
+.form_elem
+	border-width: 1px
+	border-color: rgba(0, 0, 0, 0.102)
+	border-style: solid
+	color: #acabb1
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	margin-bottom: 25px !important
+	padding-left: 20px
+	border-radius: 0px
+.form_elem:focus
+	outline: 0
+	box-shadow: -2px 3px 1px 0.1rem rgba(0, 0, 0, 0.5)
+	border-color: rgba(0, 0, 0, 0.2)
+.form_text
+	border-width: 1px
+	border-color: rgba(0, 0, 0, 0.102)
+	border-style: solid
+	color: #acabb1
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	padding-left: 20px
+	border-radius: 0px
+	margin-bottom: 20px !important
+	resize: none
+.form_text:focus
+	outline: 0
+	box-shadow: -2px 3px 1px 0.1rem rgba(0, 0, 0, 0.5)
+	border-color: rgba(0, 0, 0, 0.2)
+.form_but
+	height: 38px
+	width: 118px
+	border: 1px solid #00e0d0
+	border-radius: 2px
+	background-color: transparent
+	font-family: "Hammersmith One"
+	font-size: 1rem
+	color: #00e0d0
+	text-align: center
+.footer
+	background-image: url(../img/5.png)
+	background-repeat: no-repeat
+	background-size: cover
+.footer_area
+	color: #ffffff
+	width: 60%
+	min-height: 400px
+	padding-top: 70px
+	padding-bottom: 30px
+.footer_text
+	margin-top: 20px
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	color: #ffffff
+	margin-bottom: 70px
+.footer_doc
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 400
+	color: #ffffff
+.footer_adress_label
+	font-family: 'Roboto'
+	font-size: 0.9375rem
+	font-weight: 900
+.footer_adress_text
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+.footer_input
+	padding: 0.7rem
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	color: #e5e3ea
+	background-color: transparent
+	border-width: 1px
+	border-color: rgba(255, 255, 255,0.5)
+	border-style: solid
+	opacity: 0.8
+	-webkit-text-fill-color: #e5e3ea
+	border-radius: 0
+.footer_input:focus
+	box-shadow: none
+	border-color: rgba(255, 255, 255,0.5)
+	transition: background-color 300ms ease
+	-webkit-text-fill-color: #48484a
+.footer_send
+	cursor: pointer
+.socials_icon
+	border-radius: 50%
+	border: solid 1px #f1f0f4
+	width: 33px
+	height: 33px
+.footer_copyright
+	font-family: 'Roboto'
+	font-size: 0.875rem
+	font-weight: 300
+	color: #ffffff
+	margin-top: 50px
+.modal
+	width: 80%
+	height: 700px
+	border-radius: 4px
+	background: #fafafa
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+	display: none
+	opacity: 0
+	z-index: 38
+	text-align: center
+	overflow:  hidden
+.overlay
+	z-index: 37
+	position: fixed
+	background: rgba(0,0,0,.7)
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	cursor: pointer
+	display: none
+.modal_close
+	width: 2%
+	height: max-content
+	background-color: #fafafa
+	position: absolute
+	font-size: 29px
+	top: -20px
+	right: 0px
+	cursor: pointer
+	display: block
+	border-bottom-left-radius: 20%
+.humans img
+	width: 50px
+.swiper
+	width: 100%
+	height: 100%
+.swiper-slide
+	text-align: center
+	font-size: 18px
+	background: #fff
+.swiper-slide img
+	display: block
+	width: 100%
+	height: 100%
+	object-fit: cover
+.swiper-button-next, .swiper-button-prev
+	color: #070431 !important
+#carousel
+	display: none
+	min-height: 500px
+@media (min-width: 1800px)
+	.bgphoto
+		background-repeat: no-repeat
+		background-size: cover
+@media (max-width: 780px)
+	.exp_area
+		width: 80%
+	.story
+		width: 80%
+	.team_area
+		width: 80%
+	#carousel
+		display: block
+	#generator
+		display: none
+	.modal_close
+		width: 3%
+	.works_photo
+		width: 33.3333%
+	.form_area_big
+		width: 80%
+	.footer_area
+		width: 80%
+	.form_area_small
+		width: 80%
+	.home
+		width: 80%
+	.quotes_area
+		width: 80%
+	.humans
+		flex-wrap: nowrap
+@media (max-width: 760px)
+	#story_but
+		justify-content: center
+	#newsletter
+		max-width: 70%
+	.form_area_small
+		width: 100%
+	.quotes_area
+		width: 90%
+	.team_card
+		width: 50%
+	.team_area
+		width: 90%
+	.modal_close
+		width: 4%
+	.modal
+		height: 300px
+	#navbar
+		display: none
+	#logo
+		display: none !important
+	.story
+		width: 90%
+	.story_label
+		text-align: center
+	.navbar
+		--bs-gutter-x: 1.5rem
+		margin-top: 15px
+	.nav_open
+		display: block
+		position: absolute
+		right: 3vw
+		align-self: flex-end
+	.home
+		width: 90%
+	.media_home_icon
+		justify-content: flex-start !important
+	.comp_name
+		margin-left: 3vw
+		place-self: end center
+	.bgphoto
+		background-repeat: no-repeat
+		background-size: cover
+@media (max-width: 350px)
+	#docs
+		flex-wrap: nowrap
+	.humans
+		--bs-gutter-x: 0.2rem
