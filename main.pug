@@ -1,0 +1,250 @@
+//output:main.html
+//{
+    name: 'Paul',
+    date: 15.02.02,
+    myFunc: function(){
+      
+      return true;
+    }
+  }
+doctype html
+head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    // Bootstrap CSS
+    link(href='css/bootstrap.css' rel='stylesheet')
+    link(rel='stylesheet' type='text/css' href='css/main.min.css')
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    // FONTS
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,100&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap' rel='stylesheet')
+    
+    // JS
+    title Hello, world!
+    script(src="js/jquery-3.6.0.min.js")    
+    script(src="js/index.js")
+    script(src="js/jquery-ui.min.js")
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+body
+  - var expertises = ["first", "WEB DESIGN & DEVELOPMENT", "BRANDING IDENTITY", "MOBILE APP", "SEARCH ENGINE OPTIMIZATION", "GAME DEVELOPMENT", "MADE WITH LOVE"];
+  - var reviews = ["This is Photoshop's version  of Person № 1. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.", "This is Photoshop's version  of Person № 2. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.", "This is Photoshop's version  of Jane Galadriel. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.", "This is Photoshop's version  of Person № 4. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.", "This is Photoshop's version  of Person № 5. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit."]
+  - var names = ["SEMF UCUK", "DIK ALADIN", "JENG KOL", "PET ROMAK"]
+  - var jobs = ["CEO & FOUNDER", "ENGINEERING", "DESIGNER", "MARKETINGS"]
+  - var reviews_names = ["SOME WOMAN FROM BAR", "SOME MAN FROM COFFEE HOUSE", "JANE GALADRIEL","ABSOLUTELY NOT GALADRIEL", "SOME GUY FROM THE STREET"]
+  mixin slides (num)
+    .swiper-slide= num
+  mixin quotes (phrase, name, id)
+    .row.g-0.justify-content-center
+      .col-md-8.quote_text(id="phrase_#{id}")= phrase
+    .row.g-0.justify-content-center
+      .col-md.author_name(id="author_#{id}")= name
+  mixin humans (photo)
+    .col-auto.text-center.align-self-center
+      img(src="img/human #{photo}.png" id="human_#{photo}")
+  mixin gen_works(color)
+    div.col-md-2.works_photo(style="background-color: #{color}")
+  mixin expertise(icon, label)
+    div.col-md-4.exp_card
+      img(src="img/#{icon}.png").card_icon.rounded.mx-auto.d-block
+      h4.card_label= label
+      h4.icon_caption
+        | This is Photoshop&apos;s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+  mixin team(photo, name, job)
+    div.col-md-3.team_card
+      img(src="img/#{photo}.jpg").card_photo.mx-auto.d-block
+      div.team_caption
+        h4.card_name= name
+        h4.card_job= job
+  mixin socials(icon)
+    div.col-auto
+      a(href="")
+        img(src="img/#{icon}.png")
+  .container-fluid.p-0.full_page
+    // home page
+    .row.gx-0.bgphoto#home
+      #home.container.home
+        .row.gx-0.justify-content-between.header
+          .col-md-2
+            .row.g-0.align-items-center.justify-content-between.media_home_icon
+              .col-md-2.main_icon
+              .col-md-5.comp_name tajam
+              .col-md-5.nav_open
+          // NAVBAR
+          .col-md-7.align-self-center#navbar
+            .row.gx-0.align-items-center
+              nav.navbar.gx-2
+                a.p-0.nav_but(href='#home') HOME
+                a.p-0.nav_but(href='#about') ABOUT
+                a.p-0.nav_but(href='#expertise') EXPERTISE
+                a.p-0.nav_but(href='#team') TEAM
+                a.p-0.nav_but(href='#works') WORKS
+                a.p-0.nav_but(href='#quotes') PEOPLE SAY
+                a.p-0.nav_but(href='#contact') CONTACT
+        .row.gx-0.label_1.justify-content-center We Are Awesome Creative Agency
+        .row.justify-content-center
+          .col-md-1.separator_1
+        .row.justify-content-center
+          .col-md-10.home_text
+            | This is Photoshop&apos;s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+        .row.justify-content-center
+          button.home_but(type='button' name='button') LEARN MORE
+    .row.g-0#about
+      .container.story
+        .row.gx-4.justify-content-center
+          .col-md-3.p-2
+            img(src="img/logo.png").mx-auto.d-block.img-fluid#logo
+          .col-md-7.story_area
+            .row.g-0
+              .col-md.story_label OUR STORY
+            .row.g-0
+              .col-md.story_text
+                | This is Photoshop&apos;s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus
+                br
+                br
+                | Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            .row.g-0.justify-content-left#story_but
+              button.story_but(type='button' name='button') LEARN MORE
+    .row.g-0.video#video
+      .container
+        .row.g-0.justify-content-center
+          col-md-2.play_icon.btn
+        .row.g-0.justify-content-center
+          .col-md-2.play_text WATCH OUR STORY
+        .modal
+          iframe#youtube_video.p-0(width="100%" height="100%" src="https://www.youtube.com/embed/KvUgaHTNit4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          h4.p-1.modal_close ₓ
+        .overlay  
+    .row.g-0.expertise#expertise
+      .container.exp_area
+        .row.g-0.justify-content-center
+          .col-auto.exp_label
+            | EXPERTISE
+        .row.g-0.justify-content-center
+          .col-md-6.exp_text
+            | Lorem ipsum dolor sit amet proin gravida nibh vel velit
+        .row.g-0.justify-content-center
+          .col-md-2.separator_2
+        .row.g-0.justify-content-around.exp_cards_top
+          - for (var i = 1; i<=3;i++)
+            +expertise('icon ('+(i)+')', expertises[i])
+        .row.g-0.justify-content-center
+          .col-md.separator_3
+        .row.g-0.justify-content-around.exp_cards_bot
+          - for (var i = 4; i<=6;i++)
+            +expertise('icon ('+(i)+')', expertises[i])  
+    .row.g-0.team#team
+      .container.team_area
+        .row.g-0.justify-content-center
+          .col-md-4.team_label
+            | MEET OUR AMAZING TEAM
+        .row.g-0.justify-content-center
+          .col-md-6.team_text
+            | Lorem ipsum dolor sit amet proin gravida nibh vel velit
+        .row.g-0.justify-content-center
+          .col-md-2.separator_4
+        .row.gx-1.justify-content-center.gy-2
+          - for (var i = 0; i<4;i++)
+            +team('man',names[i],jobs[i])
+        .row.g-0.justify-content-center
+          .col-md-5.hire_text
+            | Become part of our dream team, let’s join us !
+        .row.g-0.justify-content-center
+          button.col-auto.hire_but.p-1(type='button' name='button') WE ARE HIRING
+    .row.g-0.works#works
+      .container.works_area
+        .row.g-0.justify-content-between
+          .col-md.works_label
+            | OUR WORKS
+          a.p-0.col-md-3.works_link(href='#') See All Project in dribbble
+            img(src="img/open_right.png").rounded.float-end.works_open
+      .container#generator
+        .row.g-0
+          - for (i = 0; i < 12; i++)
+            +gen_works('#'+Math.floor(Math.random()*16777215).toString(16))
+        .row.g-0.justify-content-center
+          button.works_more(type='button' name='button') LOAD MORE
+      .container#carousel
+        .swiper.mySwiper
+          .swiper-wrapper
+            - for (i=1; i<9;i++)
+              +slides("slide № " + i)
+          .swiper-button-next
+          .swiper-button-prev
+    .row.g-0.quotes#quotes
+      .container.quotes_area
+        .row.g-0.justify-content-center
+          .col-md-1.quote_big
+           | “
+        - for (i = 1; i<6; i++)
+          +quotes(reviews[i-1],reviews_names[i-1], i)
+        .row.g-0.justify-content-center
+          .col-md.author_job
+            | CEO TENGKUREP
+        .row.gx-3.justify-content-center.humans
+          - for (var i = 1; i<6; i++)
+            +humans(i)        
+    .row.g-0.form#contact
+      .container.form_area_big
+        .container.form_area_small
+          .row.g-0.justify-content-center
+            .col-md.form_label
+                | GIVE US GOOD NEWS
+          input(type="text" placeholder="Name").row.m-0.form_elem.form-control
+          input(type="text" placeholder="Email").row.m-0.form_elem.form-control
+          input(type="text" placeholder="Subject").row.m-0.form_elem.form-control
+          textarea(class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Your Message").form_text
+          .row.g-0.justify-content-center
+            button.form_but(type='button' name='button') SUBMIT
+    .row.g-0.footer
+      .container.footer_area
+        .row.gx-4.gy-2
+          .col-md-4
+            .row
+              .col-md-2.main_icon.m-0
+              .col-md-5.comp_name.align-self-center tajam
+            .row
+              .col-auto.footer_text
+                | lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
+            .row.justify-content-between#docs
+              .col-auto.footer_doc
+                a(href='') HELP
+              .col-auto.footer_doc
+                a(href='') TERMS & CONDITION
+              .col-auto.footer_doc
+                a(href='') PRIVACY
+          .col-md-4
+            .row
+              .col-auto.footer_adress_label.mt-3
+                | OUR STUDIO
+            .row.mt-4
+              .col-auto
+                img.footer_icon(src="img/point.png")
+              .col.footer_adress_text
+                | Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 
+                br 
+                | 11480 - Indonesia
+            .row.mt-2
+              .col-auto
+                img.footer_icon(src="img/phone.png")
+              .col.footer_adress_text.align-self-end
+                | (+62) 21-2224 3333
+          .col-md-4
+            .row
+              .col.footer_adress_label.mt-3
+                | STAY IN TOUCH
+            .row.gx-2.mt-3.flex-nowrap#newsletter
+              .col-auto
+                input(type="text" placeholder="Subscribe our newsletter").row.m-0.footer_input.form-control
+              .col-auto
+                img(src="img/paper.png").footer_send
+            .row.g-0.justify-content-start.gx-1.mt-3.gy-1
+              - for( var i = 1; i<7; i++)
+                +socials("soc ("+ i + ")")
+            .row.justify-content-end
+              .col-auto.footer_copyright
+                | Copyright © 2022 - Tajam Creative
+    
